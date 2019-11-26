@@ -1,0 +1,41 @@
+body 
+{
+    background: #20262E;
+    padding: 20px;
+    width: 50%;
+    transform: translate(50%,50%);
+}
+#Main-Box
+{
+    background: #fff;
+    border-radius: 4px;
+    padding: 20px;
+}
+.Main-Input
+{
+    width: 50%;
+}
+li 
+{
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 5px;
+    margin: 8px 0;
+}
+del 
+{
+    color: rgba(0, 0, 0, 0.3);
+}
+.Main-List
+{
+    display: flex;
+}
+.Main-List-Button
+{
+  padding: 1px 7px 2px;
+}
+  
+.space 
+{
+    flex-grow: 1;
+}
