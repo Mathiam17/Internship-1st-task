@@ -1,0 +1,34 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="Internship_Homework.js" defer></script>
+	<link rel="stylesheet" href="Internship_Homework.css">
+	<meta charset="UTF-8">
+	<title>Internship Homework {New Version} (Currency selector)</title>
+</head>
+<body>
+	<div id="Menu" class="Menu">  <!-- Seit tiek izvedots menu -->
+		<div class="SelectBox">  <!--Seit sakas izveidotas valutas -->
+			<div class="HiddenBox"
+				v-if="Currency.seen"
+					v-for="Currency in Currencies">
+						<button id="X" v-on:click="toggleClass(Currency); toggleCheckBox(Currency); Currency.seen = !Currency.seen">
+							x
+						</button>
+				{{Currency.Text}}
+			</div>
+		</div>
+		<div class="buttonBox"> <!-- Seit sakas valutas izvelne -->
+			<div  
+				v-for="Currency in Currencies" 
+					:key="Currency.id" 
+						v-bind:class="[ Currency.isActive ? 'off' : 'on' ]" 
+							v-on:click="toggleClass(Currency); toggleCheckBox(Currency); Currency.seen = !Currency.seen">
+								<input type="checkbox" id=Currency.checbox_id v-model="Currency.checked"/>
+				{{Currency.Text}}
+			</div>
+		</div>
+	</div>
+</body>
+</html>
