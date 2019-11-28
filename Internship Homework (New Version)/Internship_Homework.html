@@ -1,34 +1,35 @@
 <!DOCTYPE HTML>
-<html>
+<html> 				<!-- To do: fix the addCurrency function to properly remove the selected currency which has the same id as the given currency
+								fix and generally improve CSS for the hiddenBox div and its child components-->
 <head>
-	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-    <script src="Internship_Homework.js" defer></script>
-	<link rel="stylesheet" href="Internship_Homework.css">
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script> <!-- The vue.js version thsat is used for this page is called here -->
+	<link rel="stylesheet" href="Internship_Homework.css"> <!-- The CS sheet that is used for this page is called here -->>
 	<meta charset="UTF-8">
 	<title>Internship Homework {New Version} (Currency selector)</title>
 </head>
 <body>
-	<div id="Menu" class="Menu">  <!-- Seit tiek izvedots menu -->
-		<div class="SelectBox">  <!--Seit sakas izveidotas valutas -->
-			<div class="HiddenBox"
-				v-if="Currency.seen"
-					v-for="Currency in Currencies">
-						<button id="X" v-on:click="toggleClass(Currency); toggleCheckBox(Currency); Currency.seen = !Currency.seen">
-							x
-						</button>
-				{{Currency.Text}}
+	<div id="Menu" class="Menu">  <!-- Here begins the menu in which there is the currency selectors and the selected ones. -->
+		<div class="SelectBox">  <!-- Here begins the hidden box in which the selected currencies will appear. -->
+			<div class="HiddenBox"  
+					v-for="(selectedCurrency, index) in selectedCurrencies"> <!-- A vue.js cycle to display all selected currencies. -->
+							<button id="X" v-on:click="toggleClass(selectedCurrency); toggleCheckBox(selectedCurrency); removeCurrency(index)"> <!-- The caller for the class toggle function,
+																																						toggle checkbox function and the remove 
+																																				   			currency function. -->
+								x
+							</button>
+				{{selectedCurrency.Text}} <!-- Here are the selected currencies displayed. -->
 			</div>
-		</div>
-		<div class="buttonBox"> <!-- Seit sakas valutas izvelne -->
-			<div  
-				v-for="Currency in Currencies" 
+		</div> <!-- Here ends the hidden box. -->
+		<div class="buttonBox"> <!-- Here begins the selector box ( a.k.a. the button box ) where the given currencies are displayed as buttons. -->
+			<div v-for="(Currency, index) in Currencies" 
 					:key="Currency.id" 
-						v-bind:class="[ Currency.isActive ? 'off' : 'on' ]" 
-							v-on:click="toggleClass(Currency); toggleCheckBox(Currency); Currency.seen = !Currency.seen">
+						v-bind:class="[ Currency.isActive ? 'on' : 'off' ]" 
+							v-on:click="toggleClass(Currency); toggleCheckBox(Currency); addCurrency(Currency.isActive, index)">
 								<input type="checkbox" id=Currency.checbox_id v-model="Currency.checked"/>
-				{{Currency.Text}}
+				{{Currency.Text}} <!-- Here the currency type are displayed. -->
 			</div>
-		</div>
-	</div>
+		</div> <!-- Here the selector box ends. -->
+	</div> <!-- Here the menu ends. -->
+	<script src="Internship_Homework.js"></script> <!-- The vue.js script that is used for this page is called here. -->
 </body>
 </html>
