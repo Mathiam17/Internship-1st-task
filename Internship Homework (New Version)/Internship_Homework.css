@@ -17,6 +17,7 @@ body {
   display: inline-grid;
   grid-template-columns: auto auto auto;
   margin-bottom: 15px;
+ 
   margin: 3px;
 }
 .HiddenBox {
@@ -33,6 +34,7 @@ body {
   position: relative;
   overflow: visible;
 }
+
 .X {
   cursor: pointer;
   position: absolute;
