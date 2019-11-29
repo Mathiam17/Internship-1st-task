@@ -21,8 +21,12 @@ body
 	grid-template-columns: auto auto auto;
 	margin-bottom: 15px;
 	margin:3px;
-}	.HiddenBox
+}	.HiddenBox 
 	{
+/*
+The indentation of lines in this file makes harder the file to read. You can reformat the code using VS Codes built-in functionality
+https://stackoverflow.com/questions/29973357/how-do-you-format-code-in-visual-studio-code-vscode		
+*/
 		margin-right: 10px;
 		margin-bottom: 7px;
 		width: 135px;
@@ -61,6 +65,9 @@ body
 	{
     	outline: none;
 	}
+/*
+Here you can create one base css class for the styles. And in case of modification add extra CSS class with only the style modifications
+*/
 	.off , .on
 	{
 		width: 145px;
