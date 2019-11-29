@@ -13,18 +13,22 @@
 			<div class="HiddenBox"
 				v-if="Currency.seen"
 					v-for="Currency in Currencies">
+						<!-- (1) A better approach would be to call a single function on @click event  -->
+						<!-- (2) id attributes value must be unique. Now in the loop all of the currencies will have id="X"  -->
 						<button id="X" v-on:click="toggleClass(Currency); toggleCheckBox(Currency); Currency.seen = !Currency.seen">
 							x
 						</button>
 				{{Currency.Text}}
 			</div>
 		</div>
+		<!-- (3) For consistency it's better to stick with one naming pattern for the class names either lowercase, uppercase, capitalized  -->
 		<div class="buttonBox"> <!-- Seit sakas valutas izvelne -->
 			<div  
 				v-for="Currency in Currencies" 
 					:key="Currency.id" 
 						v-bind:class="[ Currency.isActive ? 'off' : 'on' ]" 
 							v-on:click="toggleClass(Currency); toggleCheckBox(Currency); Currency.seen = !Currency.seen">
+								<!-- (4) id attribute is missing quotes. Also make sure the value of it is unique  -->
 								<input type="checkbox" id=Currency.checbox_id v-model="Currency.checked"/>
 				{{Currency.Text}}
 			</div>
