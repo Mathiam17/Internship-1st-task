@@ -1,85 +1,80 @@
-body
-{
-	background-color: darkslategrey;
+body {
+  background-color: darkslategrey;
 }
-.Menu
-{
-	border: 1px solid gray;
-	border-radius: 5px;
-	padding: 10px;
-	box-shadow: 3px 3px 5px #b5b5b5;
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	background-color: white;
-	max-width: 500px;
+.Menu {
+  border: 1px solid gray;
+  border-radius: 5px;
+  padding: 10px;
+  box-shadow: 3px 3px 5px #b5b5b5;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  max-width: 500px;
 }
-.SelectBox
-{
-	display: inline-grid;
-	grid-template-columns: auto auto auto;
-	margin-bottom: 15px;
-	margin:3px;
-}	.HiddenBox
-	{
-		margin-right: 10px;
-		margin-bottom: 7px;
-		width: 135px;
-		height: 25px;
-		line-height: 25px;
-		background-color: #ededed;
-		padding: 5px;
-		font-family: Verdana;
-		border-radius: 5px;
-		text-align: center;
-		position: relative;
-		overflow: visible;
-	}	#X
-		{
-			cursor: pointer;
-			position: absolute;
-			background: #303030;
-			color: white;
-			top: -5px;
-			right: -5px;
-			border: none;
-			width: 19px;
-			height: 19px;
-			border-radius: 50%;
-		}	#X:hover
-			{
-				background: white;
-				color: #303030;
-				border: 2px solid #303030;
-			}
-.buttonBox
-{
-	display:inline-grid;
-	grid-template-columns: auto auto auto;
-}	button:focus 
-	{
-    	outline: none;
-	}
-	.off , .on
-	{
-		width: 145px;
-		height: 35px;
-		border: 1px solid gray;
-		background-color: lightgrey;
-		padding: 5px;
-		font-family: Verdana;
-		color: #29389e;
-		cursor: pointer;
-		text-align: left;
-		margin:3px;
-		margin-top: 10px;
-		font-size: 20px;
-	}	.off:hover
-		{
-			background-color: grey;
-		}
-	.on
-	{
-		background-color: white;
-	}
+.SelectBox {
+  display: inline-grid;
+  grid-template-columns: auto auto auto;
+  margin-bottom: 15px;
+  margin: 3px;
+}
+.HiddenBox {
+  margin-right: 10px;
+  margin-bottom: 7px;
+  width: 135px;
+  height: 25px;
+  line-height: 25px;
+  background-color: #ededed;
+  padding: 5px;
+  font-family: Verdana;
+  border-radius: 5px;
+  text-align: center;
+  position: relative;
+  overflow: visible;
+}
+.X {
+  cursor: pointer;
+  position: absolute;
+  background: #303030;
+  color: white;
+  top: -5px;
+  right: -5px;
+  border: none;
+  width: 19px;
+  height: 19px;
+  border-radius: 50%;
+}
+.X:hover {
+  background: white;
+  color: #303030;
+  border: 2px solid #303030;
+}
+.buttonBox {
+  display: inline-grid;
+  grid-template-columns: auto auto auto;
+}
+button:focus {
+  outline: none;
+}
+.off,
+.on {
+  width: 145px;
+  height: 35px;
+  border: 1px solid gray;
+  background-color: lightgrey;
+  padding: 5px;
+  font-family: Verdana;
+  color: #29389e;
+  cursor: pointer;
+  text-align: left;
+  margin: 3px;
+  margin-top: 10px;
+  font-size: 20px;
+}
+.off:hover {
+  background-color: grey;
+}
+.on {
+  background-color: white;
+}
