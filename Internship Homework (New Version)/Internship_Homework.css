@@ -17,11 +17,8 @@ body {
   display: inline-grid;
   grid-template-columns: auto auto auto;
   margin-bottom: 15px;
- 
   margin: 3px;
 }
-
-
 .HiddenBox {
   margin-right: 10px;
   margin-bottom: 7px;
