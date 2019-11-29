@@ -15,14 +15,19 @@ new Vue ({
         selectedCurrencies: []
     },
     methods: {    
-        toggleClass(Currency){    
+        toggleClass(Currency){
+            // Here you can use Conditional (ternary) operator
+            // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_Operator
             if(Currency.isActive){
                 Currency.isActive = false;
             }else{
                 Currency.isActive = true;
             } 
         },
+        // Is this reallay a Checkbox what the functions receives as argument?
         toggleCheckBox(Checkbox) {	// Funkcija kas maina checkboxa statusu uz izveletu vai neizveletu
+            // Is it possible to shorten the check and and avoid the comparison of `== false`?
+            // What's the difference between `==` and `===`? // Is this reallay a Checkbox what the functions receives as argument?
             if (Checkbox.checked == false) {
                 Checkbox.checked = true;
             } else {
