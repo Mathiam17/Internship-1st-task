@@ -31,7 +31,6 @@ body {
   border-radius: 5px;
   text-align: center;
   position: relative;
-  overflow: visible;
 }
 .X {
   cursor: pointer;
@@ -44,6 +43,9 @@ body {
   width: 19px;
   height: 19px;
   border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .X:hover {
   background: white;
@@ -51,6 +53,7 @@ body {
   border: 2px solid #303030;
 }
 .buttonBox {
+  margin-top: 20px;
   display: inline-grid;
   grid-template-columns: auto auto auto;
 }
@@ -59,10 +62,11 @@ button:focus {
 }
 .off,
 .on {
+  position: relative;
   width: 145px;
-  height: 35px;
+  height: 25px;
   border: 1px solid gray;
-  background-color: lightgrey;
+  background-color: #ebebeb;
   padding: 5px;
   font-family: Verdana;
   color: #29389e;
@@ -71,10 +75,32 @@ button:focus {
   margin: 3px;
   margin-top: 10px;
   font-size: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 .off:hover {
-  background-color: grey;
+  background-color: #c2c2c2;
 }
 .on {
   background-color: white;
+}
+.pressed,
+.not_pressed {
+  display: inline-block;
+  border: 1px solid gray;
+  width: 15px;
+  height: 15px;
+  border-radius: 5px;
+  position: relative;
+}
+.pressed {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center; 
+  color: red; 
+}
+.checkbox_cross
+{
+  position: absolute;
 }

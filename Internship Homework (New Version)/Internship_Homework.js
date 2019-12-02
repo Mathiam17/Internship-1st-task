@@ -30,14 +30,14 @@ new Vue({
         );
       else this.selectedCurrencies.push(this.Currencies[index]);
     },
-  // Funkcija kas maina checkboxa statusu uz izveletu vai neizveletu
-  toggle_CheckBox(Currency) {
-    if (
-      this.Currencies.includes(Currency) &&
-      this.selectedCurrencies.includes(Currency)
-    ) 
-	return true
-	else return false
-	} 
-}
+    // Funkcija kas maina checkboxa statusu uz izveletu vai neizveletu
+    getCheckboxClass(Currency) {
+      if (
+        this.Currencies.includes(Currency) &&
+        this.selectedCurrencies.includes(Currency)
+      )
+        return "pressed";
+      else return "not_pressed";
+    }
+  }
 });
