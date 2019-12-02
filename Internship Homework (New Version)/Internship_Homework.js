@@ -1,36 +1,43 @@
-new Vue ({
-    el: "#Menu",
-    data: {
-        Currencies: [
-            {Text:'EUR', id: 'Eur', checkbox_id: 'CheckEUR', isActive: true, checked: false, seen: false},
-            {Text:'PLN', id: 'Pln', checkbox_id: 'CheckPLN', isActive: true, checked: false, seen: false},
-            {Text:'GEL', id: 'Gel', checkbox_id: 'CheckGEL', isActive: true, checked: false, seen: false},
-            {Text:'DKK', id: 'Dkk', checkbox_id: 'CheckDKK', isActive: true, checked: false, seen: false},
-            {Text:'CZK', id: 'Czk', checkbox_id: 'CheckCZK', isActive: true, checked: false, seen: false},
-            {Text:'GBP', id: 'Gbp', checkbox_id: 'CheckGBP', isActive: true, checked: false, seen: false},
-            {Text:'SEK', id: 'Sek', checkbox_id: 'CheckSEK', isActive: true, checked: false, seen: false},
-            {Text:'USD', id: 'Usd', checkbox_id: 'CheckUSD', isActive: true, checked: false, seen: false},
-            {Text:'RUB', id: 'Rub', checkbox_id: 'CheckRUB', isActive: true, checked: false, seen: false}
-        ],
-        selectedCurrencies: []
+new Vue({
+  el: "#Menu",
+  data: {
+    // Valutu masivs
+    Currencies: ["EUR", "PLN", "GEL", "DKK", "CZK", "GBP", "SEK", "USD", "RUB"],
+    // Izveleto valutu masivs
+    selectedCurrencies: []
+  },
+  methods: {
+    // Funkcija kas maina valutas izveles pogas klasi, lai ta stradatu ka sledzis nevis poga
+
+    // Pagaidam strada
+    get_Class(Currency) {
+      if (
+        this.Currencies.includes(Currency) &&
+        this.selectedCurrencies.includes(Currency)
+      ) {
+        return "on";
+      } else return "off";
     },
-    methods: {    
-        toggleClass(Currency){    
-            if(Currency.isActive){
-                Currency.isActive = false;
-            }else{
-                Currency.isActive = true;
-            } 
-        },
-        toggleCheckBox(Checkbox) {	// Funkcija kas maina checkboxa statusu uz izveletu vai neizveletu
-            if (Checkbox.checked == false) {
-                Checkbox.checked = true;
-            } else {
-                Checkbox.checked = false;
-            }
-        },
-        showHiddenBox(Currency) {
-            Currency.seen = !Currency.seen
-        }
+    // Funkcija kas izveido jaunu masiva ierakstu nemot datus no jau pastavosa masiva
+    Add_or_Remove_Currency(index, Currency) {
+      if (
+        this.Currencies.includes(Currency) &&
+        this.selectedCurrencies.includes(Currency)
+      )
+        this.$delete(
+          this.selectedCurrencies,
+          this.selectedCurrencies.indexOf(Currency)
+        );
+      else this.selectedCurrencies.push(this.Currencies[index]);
+    },
+    // Funkcija kas maina checkboxa statusu uz izveletu vai neizveletu
+    getCheckboxClass(Currency) {
+      if (
+        this.Currencies.includes(Currency) &&
+        this.selectedCurrencies.includes(Currency)
+      )
+        return "pressed";
+      else return "not_pressed";
     }
-})
+  }
+});
