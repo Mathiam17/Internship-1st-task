@@ -5,7 +5,7 @@ new Vue ({
         checked: false,
         picked: '',
         selected: '',
-        multiSelected: '',
+        multiSelected: [],
     },
     methods: {
 
