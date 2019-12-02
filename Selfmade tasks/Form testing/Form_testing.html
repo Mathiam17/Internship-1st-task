@@ -9,9 +9,37 @@
         <title>Page for form testing with Vue.js</title>
     </head>
     <body>
-        <div id="MENU">
-            
-        </div>
-        <scripts rc="Form_testing.js"></script>
+        <form id="MENU">
+            <p>
+                <input type="text" v-model="message">
+                {{ message }}
+            </p>
+            <p>
+                <input type="checkbox" v-model="checked">
+                {{ checked ? "yes" : "no" }}
+            </p>
+            <p>
+                <input type="radio" name="picked" value="Matīss" v-model="picked">
+                <input type="radio" name="picked" value="Brendons" v-model="picked">
+                {{ picked }}
+            </p>
+            <p>
+                <select v-model="selected">
+                    <option> Langenfelds </option>
+                    <option> Liflands </option> 
+                </select>
+                {{ selected }}
+            </p>
+            <p>
+                <select v-model="multiSelected" multiple>
+                    <option>variants 1</option>
+                    <option>variants 2</option>
+                    <option>variants 3</option>
+                </select>
+                {{ multiSelected }}
+            </p>
+            <p><pre>data: {{$data | json 2}}</pre></p>
+        </form>
+        <script src="Form_testing.js"></script>
     </body>
 </html>
