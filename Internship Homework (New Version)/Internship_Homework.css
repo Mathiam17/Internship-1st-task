@@ -11,7 +11,8 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   background-color: white;
-  max-width: 500px;
+  user-select: none;
+  max-width: 485px;
 }
 .SelectBox {
   display: inline-grid;
@@ -55,7 +56,10 @@ body {
 .buttonBox {
   margin-top: 20px;
   display: inline-grid;
+  grid-gap: 6px;
+  grid-row-gap: 20px;
   grid-template-columns: auto auto auto;
+  width: 100%;
 }
 button:focus {
   outline: none;
@@ -72,8 +76,6 @@ button:focus {
   color: #29389e;
   cursor: pointer;
   text-align: left;
-  margin: 3px;
-  margin-top: 10px;
   font-size: 20px;
   display: flex;
   flex-direction: column;
@@ -100,7 +102,8 @@ button:focus {
   align-items: center; 
   color: red; 
 }
-.checkbox_cross
-{
+.checkbox_cross {
   position: absolute;
+  top: 50%;
+  transform: translateY(-55%);
 }

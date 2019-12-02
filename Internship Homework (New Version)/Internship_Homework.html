@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-  <!-- To do: fix and generally improve CSS for the hiddenBox and buttonBox divs and their child components -->
+  <!-- To do: Fix the spacing problem for the selectBox and HiddenBox -->
   <head>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 
@@ -41,7 +41,7 @@
               v-bind:class="getCheckboxClass(Currency)"
               v-if="getCheckboxClass(Currency) == 'pressed' "
             >
-              <span class="checkbox_cross">X</span>
+              <span class="checkbox_cross">x</span>
             </div>
             {{Currency}}
           </div>
@@ -51,4 +51,4 @@
 
     <script src="Internship_Homework.js"></script>
   </body>
-</html>
+</html> 
