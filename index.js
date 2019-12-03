@@ -1,5 +1,5 @@
 new Vue({
-    el: "#body",
+    el: "#Menu",
     data: {
         is1stTaskSelected: false,
         isHomeworkSelected: false,

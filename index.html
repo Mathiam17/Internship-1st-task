@@ -3,129 +3,63 @@
   <head>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <title>Index page for Internship tasks</title>
+    <link rel="stylesheet" href="index.css" />
   </head>
   <body>
-    <div id="body">
-      <div v-if=" showMainSelectScreen == true ">
-        <h1>The files from the repository:</h1>
-        <ul>
-          <li>
-            <button
-              @click=" is1stTaskSelected = !is1stTaskSelected ; showMainSelectScreen = !showMainSelectScreen "
-            >
-              Internship 1st task
-            </button>
+    <div id="Menu" class="body">
+      <ul>
+        <div class="dropdown">
+          <li class="Selector">
+            Internship 1st Task
           </li>
-          <li>
-            <button
-              @click=" isHomeworkSelected = !isHomeworkSelected ; showMainSelectScreen = !showMainSelectScreen "
-            >
-              Internship Homework (New Version)
-            </button>
-          </li>
-          <li>
-            <button
-              @click=" isSelfmadeSelected = !isSelfmadeSelected ; showMainSelectScreen = !showMainSelectScreen "
-            >
-              Selfmade Tasks
-            </button>
-          </li>
-        </ul>
-      </div>
-
-      <div v-if=" isHomeworkSelected == true ">
-        <h1>The files for Internship Homework (New Version)</h1>
-        <ul>
-          <li>
-            <a
-              href="/Internship-Homework/Internship_Homework.html"
-            >
-              Internship Homework web page
-            </a>
-          </li>
-          <li>
-            <a href="Internship-Homework/Internship_Homework.css">
-              Internship Homework .css file
-            </a>
-          </li>
-          <li>
-            <a href="Internship-Homework/Internship_Homework.js">
-              Internship Homework .js file
-            </a>
-          </li>
-          <li>
-            <button
-              @click="isHomeworkSelected = !isHomeworkSelected ; showMainSelectScreen = !showMainSelectScreen "
-            >
-              Go Back
-            </button>
-          </li>
-        </ul>
-      </div>
-
-      <div v-if=" is1stTaskSelected == true ">
-        <h1>The files for Internship 1st task</h1>
-        <ul>
-          <li>
+          <div class="dropdownContent">
             <a href="Internship-1st-Task/Mainscreen.html">
               Internship 1st Task web page
             </a>
-          </li>
-          <li>
             <a href="Internship-1st-Task/Mainscreen_Style.css">
               Internship 1st Task .css file
             </a>
-          </li>
-          <li>
             <a href="Internship-1st-Task/Mainscreen_Control.js">
               Internship 1st Task .js file
             </a>
+          </div>
+        </div>
+        <div class="dropdown">
+          <li class="Selector">
+            Internship Homework
           </li>
-          <li>
-            <button
-              @click=" is1stTaskSelected = !is1stTaskSelected ; showMainSelectScreen = !showMainSelectScreen "
-            >
-              Go Back
-            </button>
-          </li>
-        </ul>
-      </div>
+          <div class="dropdownContent">
+            <a href="Internship-Homework/Internship_Homework.html">
+              Internship Homework Task web page
+            </a>
+            <a href="Internship-Homework/Internship_Homework.css">
+              Internship Homework .css file
+            </a>
+            <a href="Internship-Homework/Internship_Homework.js">
+              Internship Homework .js file
+            </a>
+          </div>
+        </div>
 
-      <div v-if=" isSelfmadeSelected == true ">
-        <h1>The files for Selfmade tasks</h1>
-        <ul>
-          <li>
-            <button
-              @click=" isFormTestingSelected = !isFormTestingSelected ; isSelfmadeSelected = !isSelfmadeSelected "
-            >
+        <div class="dropdown">
+          <li class="Selector">
+            Selfmade Tasks
+          </li>
+          <div class="dropdownContent dropdown" id="Form">
+            <li class="underSelector">
               Form Testing
-            </button>
-          </li>
-          <li>
-            <button
-              @click=" isSelfmadeSelected = !isSelfmadeSelected ; showMainSelectScreen = !showMainSelectScreen "
-            >
-              Go Back
-            </button>
-          </li>
-        </ul>
-      </div>
-
-      <div v-if=" isFormTestingSelected == true ">
-        <h1>The files for Form Testing</h1>
-        <ul>
-          <li>
-            <a href="Selfmade-Tasks/Form-Testing/Form_Testing.html">
-              Form Testing web page
-            </a>
-          </li>
-          <li>
-            <a href="Selfmade-Tasks/Form-Testing/Form_Testing.js">
-              Form Testing .js file
-            </a>
-          </li>
-        </ul>
-      </div>
+            </li>
+            <div class="underDropdownContent">
+              <a href="Selfmade-Tasks/Form-Testing/Form_Testing.html">
+                Form Testing web page
+              </a>
+              <a href="Selfmade-Tasks/Form-Testing/Form_Testing.js">
+                Form Testing .js file
+              </a>
+            </div>
+          </div>
+        </div>
+      </ul>
     </div>
     <script src="index.js"></script>
   </body>
