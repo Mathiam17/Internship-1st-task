@@ -42,18 +42,31 @@ li {
 }
 .underDropdownContent,
 .dropdownContent {
-  display: none;
+  height: 0px;
+  overflow: hidden;
   transition: 0.5s;
+}
+.underDropdownContent {
+    overflow: visible;
+}
+.underDropdownContent {
+    overflow: auto;
 }
 .dropdownContent a:hover {
   transition: 0.2s;
   background-color: #6aa2f7;
 }
 .dropdown:hover .dropdownContent {
-  display: block;
+  transition: 0.5s ease-in-out;
+  height: 120px;
+}
+.dropdown:hover #Form {
+    transition: 0.5s ease-in-out;
+  height: 156px;
 }
 .dropdownContent:hover .underDropdownContent {
-  display: block;
+  transition: 0.5s ease-in-out;
+  height: 200px;
 }
 #Form:hover .underSelector {
   background-color: #5335a6;
