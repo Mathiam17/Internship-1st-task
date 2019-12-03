@@ -102,8 +102,3 @@ button:focus {
   align-items: center; 
   color: red; 
 }
-.checkbox_cross {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-55%);
-}
