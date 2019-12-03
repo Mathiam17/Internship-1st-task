@@ -1,26 +1,136 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Index page for Internship tasks</title>
-    </head>
-    <body>
+  <head>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <title>Index page for Internship tasks</title>
+  </head>
+  <body>
+    <div id="body">
+      <div v-if=" showMainSelectScreen == true ">
         <h1>The files from the repository:</h1>
         <ul>
-            <li>
-                <a href="Index files/index_1stTask.html">
-                    Internship 1st task
-                </a>
-            </li>
-            <li>
-                <a href="Index files/index_Homework.html">
-                    Internship Homework (New Version)
-                </a>
-            </li>
-            <li>
-                <a href="Index files/Selfmade tasks/Form testing/Form_testing.html">
-                    Selfmade Tasks
-                </a>
-            </li>
+          <li>
+            <button
+              @click=" is1stTaskSelected = !is1stTaskSelected ; showMainSelectScreen = !showMainSelectScreen "
+            >
+              Internship 1st task
+            </button>
+          </li>
+          <li>
+            <button
+              @click=" isHomeworkSelected = !isHomeworkSelected ; showMainSelectScreen = !showMainSelectScreen "
+            >
+              Internship Homework (New Version)
+            </button>
+          </li>
+          <li>
+            <button
+              @click=" isSelfmadeSelected = !isSelfmadeSelected ; showMainSelectScreen = !showMainSelectScreen "
+            >
+              Selfmade Tasks
+            </button>
+          </li>
         </ul>
-    </body>
+      </div>
+
+      <div v-if=" isHomeworkSelected == true ">
+        <h1>The files for Internship Homework (New Version)</h1>
+        <ul>
+          <li>
+            <a
+              href="/Internship Homework (New Version)/Internship_Homework.html"
+            >
+              Internship Homework web page
+            </a>
+          </li>
+          <!--    <li>
+                <a href="Internship Homework (New Version)/Internship_Homework.css">
+                        Internship Homework .css file
+                </a>
+            </li>
+            <li>
+                <a href="Internship Homework (New Version)/Internship_Homework.js">
+                            Internship Homework .js file
+                </a>
+            </li> -->
+          <li>
+            <button
+              @click="isHomeworkSelected = !isHomeworkSelected ; showMainSelectScreen = !showMainSelectScreen "
+            >
+              Go Back
+            </button>
+          </li>
+        </ul>
+      </div>
+
+      <div v-if=" is1stTaskSelected == true ">
+        <h1>The files for Internship 1st task</h1>
+        <ul>
+          <li>
+            <a href="Internship 1st task/Mainscreen.html">
+              Internship 1st Task web page
+            </a>
+          </li>
+          <!-- <li>
+                <a href="Internship 1st task/Mainscreen.css">
+                    Internship 1st Task .css file
+                </a>
+            </li>
+            <li>
+                <a href="Internship 1st task/Mainscreen.js">
+                    Internship 1st Task .js file
+                </a>
+            </li> -->
+          <li>
+            <button
+              @click=" is1stTaskSelected = !is1stTaskSelected ; showMainSelectScreen = !showMainSelectScreen "
+            >
+              Go Back
+            </button>
+          </li>
+        </ul>
+      </div>
+
+      <div v-if=" isSelfmadeSelected == true ">
+        <h1>The files for Selfmade tasks</h1>
+        <ul>
+          <li>
+            <button
+              @click=" isFormTestingSelected = !isFormTestingSelected ; isSelfmadeSelected = !isSelfmadeSelected "
+            >
+              Form Testing
+            </button>
+          </li>
+          <li>
+            <button
+              @click=" isSelfmadeSelected = !isSelfmadeSelected ; showMainSelectScreen = !showMainSelectScreen "
+            >
+              Go Back
+            </button>
+          </li>
+        </ul>
+      </div>
+      <div v-if = " isFormTestingSelected == true ">
+        <h1>The files for Form Testing</h1>
+        <ul>
+            <li>
+                <a href="Selfmade tasks/Form testing/Form_testing.html">
+                    Form Testing web page
+                </a>
+            </li>
+           <!-- <li>
+                <a href="Selfmade tasks/Form testing/Form_testing.css">
+                    Form Testing .css file
+                </a>
+            </li>
+            <li>
+                <a href="Selfmade tasks/Form testing/Form_testing.js">
+                    Form Testing .js fi
+                </a>
+            </li> -->
+        </ul>
+      </div>
+    </div>
+    <script src="index.js"></script>
+  </body>
 </html>

@@ -1,15 +1,10 @@
 new Vue({
   el: "#Menu",
   data: {
-    // Valutu masivs
     Currencies: ["EUR", "PLN", "GEL", "DKK", "CZK", "GBP", "SEK", "USD", "RUB"],
-    // Izveleto valutu masivs
     selectedCurrencies: []
   },
   methods: {
-    // Funkcija kas maina valutas izveles pogas klasi, lai ta stradatu ka sledzis nevis poga
-
-    // Pagaidam strada
     get_Class(Currency) {
       if (
         this.Currencies.includes(Currency) &&
@@ -18,7 +13,6 @@ new Vue({
         return "on";
       } else return "off";
     },
-    // Funkcija kas izveido jaunu masiva ierakstu nemot datus no jau pastavosa masiva
     Add_or_Remove_Currency(index, Currency) {
       if (
         this.Currencies.includes(Currency) &&
@@ -30,7 +24,6 @@ new Vue({
         );
       else this.selectedCurrencies.push(this.Currencies[index]);
     },
-    // Funkcija kas maina checkboxa statusu uz izveletu vai neizveletu
     getCheckboxClass(Currency) {
       if (
         this.Currencies.includes(Currency) &&
