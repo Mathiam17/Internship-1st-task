@@ -55,14 +55,17 @@ li {
 }
 .dropdown:hover .dropdownContent {
   transition: 0.5s ease-in-out;
+  transition-delay: 0.3s;
   height: 120px;
 }
 .dropdown:hover #Form {
   transition: 0.5s ease-in-out;
+  transition-delay: 0.3s;
   height: 156px;
 }
 .dropdownContent:hover .underDropdownContent {
   transition: 0.5s ease-in-out;
+  transition-delay: 0.5s;
   height: 200px;
 }
 #Form:hover .underSelector {
