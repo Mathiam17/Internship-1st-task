@@ -42,7 +42,8 @@ li {
 }
 .underDropdownContent,
 .dropdownContent,
-.dropdownFolder {
+.dropdownFolder
+{
   height: 0px;
   overflow: hidden;
   transition: 1s;
@@ -59,17 +60,12 @@ li {
 .dropdown:hover .dropdownFolder {
   transition: 0.5s ease-in-out;
   transition-delay: 0.3s;
-  height: 77px;
-}
-.dropdown:hover .DropdownFolder {
-  transition: 0.5s ease-in-out;
-  transition-delay: 0.3s;
-  max-height: 156px;
+  height: 100%;
 }
 .dropdownFolder:hover .underDropdownContent {
   transition: 0.5s ease-in-out;
   transition-delay: 0.3s;
-  height: 156px;
+  height: 100%;
 }
 .dropdownFolder:hover .underSelector {
   background-color: #5335a6;
