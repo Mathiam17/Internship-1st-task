@@ -13,9 +13,11 @@ body {
 }
 .Selector {
   background-color: #195ac2;
+  transition: 0.7s;
 }
 .underSelector {
   background-color: #2176ff;
+  transition: 1s;
 }
 .dropdown .underSelector:hover {
   transition: 0.5s;
@@ -39,6 +41,7 @@ li {
   text-decoration: none;
   color: inherit;
   font-size: 125%;
+  transition: 1s;
 }
 .underDropdownContent,
 .dropdownContent {
@@ -46,22 +49,16 @@ li {
   overflow: hidden;
   transition: 0.5s;
 }
-.underDropdownContent {
-    overflow: visible;
-}
-.underDropdownContent {
-    overflow: auto;
-}
 .dropdownContent a:hover {
   transition: 0.2s;
-  background-color: #6aa2f7;
+  background-color: #78abff/*#6aa2f7*/;
 }
 .dropdown:hover .dropdownContent {
   transition: 0.5s ease-in-out;
   height: 120px;
 }
 .dropdown:hover #Form {
-    transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
   height: 156px;
 }
 .dropdownContent:hover .underDropdownContent {
