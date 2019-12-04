@@ -18,11 +18,7 @@ body {
 .underSelector {
   background-color: #2176ff;
   transition: 1s;
-}
-.dropdown .underSelector:hover {
-  transition: 0.5s;
-  background-color: #7249e3;
-}
+}  
 ul {
   width: 100%;
   padding: 0em;
@@ -33,7 +29,7 @@ li {
   font-size: 150%;
   display: block;
 }
-.dropdownContent a {
+.dropdownContent a, .underDropdownContent a {
   padding: 0.4em;
   background-color: #5f99f5;
   font-size: 150%;
@@ -42,33 +38,40 @@ li {
   color: inherit;
   font-size: 125%;
   transition: 1s;
+  user-select: none;
 }
 .underDropdownContent,
-.dropdownContent {
+.dropdownContent,
+.dropdownFolder {
   height: 0px;
   overflow: hidden;
-  transition: 0.5s;
+  transition: 1s;
 }
 .dropdownContent a:hover {
   transition: 0.2s;
-  background-color: #78abff/*#6aa2f7*/;
+  background-color: #78abff;
 }
 .dropdown:hover .dropdownContent {
   transition: 0.5s ease-in-out;
   transition-delay: 0.3s;
   height: 120px;
 }
-.dropdown:hover #Form {
+.dropdown:hover .dropdownFolder {
+  transition: 0.5s ease-in-out;
+  transition-delay: 0.3s;
+  height: 77px;
+}
+.dropdown:hover .DropdownFolder {
+  transition: 0.5s ease-in-out;
+  transition-delay: 0.3s;
+  max-height: 156px;
+}
+.dropdownFolder:hover .underDropdownContent {
   transition: 0.5s ease-in-out;
   transition-delay: 0.3s;
   height: 156px;
 }
-.dropdownContent:hover .underDropdownContent {
-  transition: 0.5s ease-in-out;
-  transition-delay: 0.5s;
-  height: 200px;
-}
-#Form:hover .underSelector {
+.dropdownFolder:hover .underSelector {
   background-color: #5335a6;
   transition: 0.5s;
 }

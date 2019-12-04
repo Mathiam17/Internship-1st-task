@@ -1,0 +1,19 @@
+body {
+    display: flex;
+    justify-content: center;
+}
+.box {
+    display: inline-block;
+    position: absolute;
+    width: 500px;
+    padding: 20px;
+    border: 2px solid lightgray;
+    border-radius: 5pt;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.truncateEllipsis {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis; 
+}
