@@ -7,7 +7,27 @@
         <title>Navigation bar testing with Vue.js</title>
     </head>
     <body>
-        HELLO
+        <div id="Menu">
+            <nav v-bind:class="active" v-on:click.prevent>
+                <a href="#" class="Navigation_Bar Home" @click="makeActive('Home')">
+                    Home
+                </a>
+                <a href="#" class="Navigation_Bar News" @click="makeActive('News')">
+                    News
+                </a>
+                <a href="#" class="Navigation_Bar Projects" @click="makeActive('Projects')">
+                    Projects
+                </a>
+                <a href="#" class="Navigation_Bar Services" @click="makeActive('Services')">
+                    Services
+                </a>
+                <a href="#" class="Navigation_Bar Contacts" @click="makeActive('Contacts')">
+                    Contacts
+                </a>
+            </nav>
+
+            <p>You chose <b>{{ active }}</b></p>
+        </div>
         <script src="Navigation_Bar.js"></script>
     </body>
 </html>

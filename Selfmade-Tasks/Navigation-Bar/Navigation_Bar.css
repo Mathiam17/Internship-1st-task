@@ -1,0 +1,48 @@
+body {
+    font-family: Verdana;
+    text-align: center;
+}
+a, a:visited {
+    color: gray;
+    outline: none;
+    text-decoration: none;
+    user-select: none;
+}
+nav {
+    display: inline-block;
+    margin: 5em auto 3em;
+    border-radius: 0.5em;
+    background-color: thistle;
+}
+nav a {
+    display: inline-block;
+    padding: 1em 2em;
+    font-weight: bold;
+    text-transform: uppercase;
+
+    transition: 0.5s;
+}
+nav a:first-child{
+    border-radius:0.5em 0 0 0.5em;
+}
+
+nav a:last-child{
+    border-radius:0 0.5em 0.5em 0;
+}
+nav.Home .Home,
+nav.News .News,
+nav.Projects .Projects,
+nav.Services .Services,
+nav.Contacts .Contacts {
+    background-color: salmon;
+}
+p {
+    color: gray;
+}
+b {
+    color: white;
+    display: inline-block;
+    padding: 0.5em;
+    border-radius: 0.25em;
+    background-color: skyblue;
+}

@@ -9,7 +9,7 @@ body {
 }
 .dropdown {
   cursor: pointer;
-  width: 1920px;
+  width: 100%;
 }
 .Selector {
   background-color: #195ac2;
